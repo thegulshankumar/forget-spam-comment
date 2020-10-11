@@ -8,7 +8,7 @@ To prevent spam comments plugin blocks the default action path (wp-comments-post
 
 ### Video Demonstration 
 
-https://www.youtube.com/watch?v=uwIfk08GSwk
+[![Forget Spam Comment](https://img.youtube.com/vi/uwIfk08GSwk/0.jpg)](https://www.youtube.com/watch?v=uwIfk08GSwk)
 
 ### Quick Info 
 

@@ -44,6 +44,11 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 
 ### Changelog ==
 
+= 1.0.2
+* Performance optimization
+* Added hint for purging cache upon plugin activation
+* Added support links
+
 = 1.0.1
 * Performance optimization
 

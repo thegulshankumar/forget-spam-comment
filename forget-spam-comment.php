@@ -5,12 +5,58 @@
  * Description:       The ultimate solution to stop spam comments in default commenting system of WordPress.
  * Author:            Gulshan Kumar
  * Author URI:        https://www.gulshankumar.net/
- * Version:           1.0.1
+ * Version:           1.0.2
  * Text Domain:       forget-spam-comment
  */
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
+}
+
+/* Register activation hook. */
+register_activation_hook( __FILE__, 'forget_spam_comment_activation_hook' );
+ 
+/**
+ * Runs only when the plugin is activated.
+ * @since 1.0.2
+ */
+function forget_spam_comment_activation_hook() {
+ 
+/* Create transient data */
+    set_transient( 'forget-spam-comment-activation-notice', true, 5 );
+}
+ 
+ 
+/* Add admin notice */
+add_action( 'admin_notices', 'forget_spam_comment_notice' );
+ 
+ 
+/**
+ * Admin Notice on Activation.
+ * @since 1.0.2
+ */
+function forget_spam_comment_notice(){
+ 
+    /* Check transient, if available display notice */
+    if( get_transient( 'forget-spam-comment-activation-notice' ) ){
+        ?><style>div#message.updated{ display: none; }</style>
+        <div class="updated notice is-dismissible">
+            <p>Thank you for using Forget Spam Comment. 😎 <strong>Please clear Page Cache</strong>.</p>
+        </div>
+        <?php
+        /* Delete transient, only display this notice once. */
+        delete_transient( 'forget-spam-comment-activation-notice' );
+    }
+}
+
+// Support links
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'forget_spam_comment_add_action_links');
+function forget_spam_comment_add_action_links($links) {
+    $plugin_shortcuts = array(
+        '<a rel="noopener" href="https://help.gulshankumar.net" target="_blank">Ask a Question</a>',
+        '<a rel="noopener" href="https://www.buymeacoffee.com/gulshan" target="_blank" style="color:#3db634;">Buy developer a coffee</a>'
+    );
+    return array_merge($links, $plugin_shortcuts);
 }
 
 // Step 1. Firstly, remove the Comment Action URL from HTML Document to prevent bot comments

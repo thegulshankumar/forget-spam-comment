@@ -1,7 +1,7 @@
 A lightweight and privacy-friendly plugin to prevent spam comment in the *default commenting system* of WordPress.
 
 ### Important
-* No settings required. Please clear page cache after plugin activation.
+* No settings required. Please clear page cache after plugin activation or deactivation.
 
 ### How does it work? 
 To prevent spam comments plugin blocks the default action path (wp-comments-post.php) for bots and make it accessible over unique hash query string when a visitor scroll to leave a comment. This way it prevents automated spam comment done by bots.

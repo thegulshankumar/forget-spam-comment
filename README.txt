@@ -1,9 +1,9 @@
 === Forget Spam Comment ===
 Contributors: thegulshankumar
-Donate link: https://paypal.me/thegulshankumar
+Donate link: https://www.buymeacoffee.com/gulshan
 Tags: comments, spam, anti spam, stop spam, security
 Requires at least: 4.5
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ The ultimate solution to stop spam comments in the default commenting system of 
 A lightweight and privacy-friendly plugin to prevent spam comment in the default commenting system of WordPress.
 
 = Important  =
-* No settings required. Please clear page cache after plugin activation.
+* No settings required. Please clear page cache after plugin activation or deactivation.
 
 = How does it work? =
 To prevent spam comments plugin blocks the default action path (wp-comments-post.php) for bots and make it accessible over unique hash query string when a visitor scroll to leave a comment. This way it prevents automated spam comment done by bots.
@@ -25,10 +25,10 @@ To prevent spam comments plugin blocks the default action path (wp-comments-post
 [youtube https://www.youtube.com/watch?v=uwIfk08GSwk]
 Watch on [YouTube](https://www.youtube.com/watch?v=uwIfk08GSwk)
 
-== Quick Info ==
+== Let's connect ==
 
 - Join [GulshanForum](https://help.gulshankumar.net/) to get instant help for everything related to WordPress.
-- [Donate](https://paypal.me/thegulshankumar) or share this plugin with your friends.
+- Follow on [Twitter](https://twitter.com/TheGulshanKumar) to stay in touch.
 
 == Installation ==
 
@@ -58,6 +58,10 @@ This plugin is suppose to work only with Default Commenting System of WordPress.
 Allow me a chance to look into your problem by opening a support topic. I will reply in 24 hours.
 
 == Changelog ==
+
+= 1.0.2 =
+* Added hint for purging cache upon plugin activation
+* Added support links
 
 = 1.0.1 =
 * Performance optimization

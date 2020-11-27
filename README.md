@@ -13,7 +13,7 @@ To prevent spam comments plugin blocks the default action path (wp-comments-post
 ### Quick Info 
 
 - Join [GulshanForum](https://help.gulshankumar.net/) to get instant help for everything related to WordPress.
-- [Donate](https://paypal.me/thegulshankumar) or share this plugin with your friends.
+- [Donate](https://www.buymeacoffee.com/gulshan) or share this plugin with your friends.
 
 ### Installation 
 

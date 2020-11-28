@@ -1,6 +1,6 @@
 A lightweight and privacy-friendly plugin to prevent spam comment in the *default commenting system* of WordPress.
 
-Available at https://wordpress.org/plugins/forget-spam-comment/
+#### Download https://wordpress.org/plugins/forget-spam-comment/
 
 ### Important
 * No settings required. Please clear page cache after plugin activation or deactivation.

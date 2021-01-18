@@ -46,6 +46,12 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 
 ### Changelog ==
 
+= 1.0.3
+* Minified inline JS for better performance
+* Translation made available for Hindi, Bengali, English (United States), English (UK).
+* Minor tweaks
+
+
 = 1.0.2
 * Added hint for purging cache upon plugin activation
 * Added support links

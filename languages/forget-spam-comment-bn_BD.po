@@ -1,0 +1,59 @@
+# Copyright (C) 2021 Gulshan Kumar
+# This file is distributed under the same license as the Forget Spam Comment plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Forget Spam Comment 1.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/forget-spam-"
+"comment\n"
+"Last-Translator: Gulshan Kumar\n"
+"Language-Team: Bengali (Bangladesh)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-01-18 14:23+0000\n"
+"PO-Revision-Date: 2021-01-18 15:32+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: forget-spam-comment\n"
+"Language: bn_BD\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.5.0; wp-5.6"
+
+#: forget-spam-comment.php:57
+msgid "Ask a Question"
+msgstr "প্রশ্ন জিজ্ঞাসা কর"
+
+#: forget-spam-comment.php:58
+msgid "Buy developer a coffee"
+msgstr "বিকাশকারীদের জন্য কফি কিনুন"
+
+#. Name of the plugin
+msgid "Forget Spam Comment"
+msgstr "Forget Spam Comment"
+
+#. Author of the plugin
+msgid "Gulshan Kumar"
+msgstr "গুলশান কুমার"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/forget-spam-comment/"
+msgstr "https://wordpress.org/plugins/forget-spam-comment/"
+
+#. Author URI of the plugin
+msgid "https://www.gulshankumar.net/"
+msgstr "https://www.gulshankumar.net/"
+
+#: forget-spam-comment.php:45
+msgid ""
+"Thank you for using Forget Spam Comment. 😎 <strong>Please clear Page "
+"Cache</strong>"
+msgstr ""
+"Forget Spam Comment ব্যবহার করার জন্য আপনাকে ধন্যবাদ. 😎 <strong>দয়া করে  "
+"clear Page Cache.</strong>"
+
+#. Description of the plugin
+msgid ""
+"The ultimate solution to stop spam comments in default commenting system of "
+"WordPress."
+msgstr ""
+"ওয়ার্ডপ্রেস ডিফল্ট মন্তব্য সিস্টেমে স্প্যাম মন্তব্যগুলি ব্লক করার চূড়ান্ত "
+"সমাধান।"

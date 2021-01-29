@@ -5,7 +5,7 @@
  * Description:       The ultimate solution to stop spam comments in default commenting system of WordPress.
  * Author:            Gulshan Kumar
  * Author URI:        https://www.gulshankumar.net/
- * Version:           1.0.3
+ * Version:           1.0.4
  * Text Domain:       forget-spam-comment
  * Domain Path:       /languages
  */
@@ -52,7 +52,7 @@ add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'forget_spam_comm
 function forget_spam_comment_add_action_links($links) {
     $plugin_shortcuts = array(
         '<a rel="noopener" href="https://help.gulshankumar.net" target="_blank">' . __('Ask a Question', 'forget-spam-comment') . '</a>',
-        '<a rel="noopener" href="https://www.buymeacoffee.com/gulshan" target="_blank" style="color:#080;">' . __('Buy developer a coffee', 'forget-spam-comment') . ' ☕' .'</a>'
+        '<a rel="noopener" href="https://www.buymeacoffee.com/gulshan" target="_blank" style="color:#080;">' . __('Buy developer a coffee', 'forget-spam-comment') . '</a>'
     );
     return array_merge($links, $plugin_shortcuts);
 }

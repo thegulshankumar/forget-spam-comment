@@ -44,13 +44,15 @@ This plugin is suppose to work only with Default Commenting System of WordPress.
 ####  How to get support for this plugin?
 Allow me a chance to look into your problem by opening a support topic. I will reply in 24 hours.
 
-### Changelog ==
+#### Changelog
 
-= 1.0.3
-* Minified inline JS for better performance
-* Translation made available for Hindi, Bengali, English (United States), English (UK).
+= 1.0.4 =
 * Minor tweaks
 
+= 1.0.3 =
+* Minified inline JS for better performance
+* Translation made available for Hindi, Bengali, English (United States), English (UK).
+* Minor tweaks 
 
 = 1.0.2
 * Added hint for purging cache upon plugin activation

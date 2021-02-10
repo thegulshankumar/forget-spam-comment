@@ -1,9 +1,9 @@
 === Forget Spam Comment ===
 Contributors: thegulshankumar
 Donate link: https://www.buymeacoffee.com/gulshan
-Tags: comments, spam, anti spam, stop spam, security
+Tags: comments, spam, anti spam, stop spam, security, gdpr, firewall
 Requires at least: 4.5
-Tested up to: 5.5.3
+Tested up to: 5.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,10 +12,20 @@ The ultimate solution to stop spam comments in the default commenting system of 
 
 == Description ==
 
-A lightweight and privacy-friendly plugin to prevent spam comment in the default commenting system of WordPress.
+The fastest and GDPR compliant Anti-Spam plugin to prevent bot spam in the **Default Commenting System** of WordPress.
 
-= Important  =
-* No settings required. Please clear page cache after plugin activation or deactivation.
+= Features  =
+* 100% effective.
+* Captcha-Free solution.
+* No settings are required.
+* Automatic. No need of false-positive comment moderation.
+* GDPR Compliant.
+* Fastest ever. A tiny inline JavaScript in just ~200 bytes does all magic.
+* Compatible with all page caching and performance optimization plugins.
+
+== Important ==
+* Please clear page cache after plugin activation or deactivation.
+* Only for default commenting system. Not for AMP. Please read FAQs.
 
 = How does it work? =
 To prevent spam comments plugin blocks the default action path (wp-comments-post.php) for bots and make it accessible over unique hash query string when a visitor scroll to leave a comment. This way it prevents automated spam comment done by bots.
@@ -48,16 +58,24 @@ To install this plugin manually
 
 == Frequently Asked Questions ==
 
-= How to test either this plugin is working or not? =
+= How to test whether this plugin is working or not? =
 Go to any post where comment is enabled and try to post a comment. If comment is posted successfully means everything is working fine. If you see error 400, you just have forgot to clear page cache after plugin activation. If you are still unable to post a comment and page just reload to itself means your theme uses a different comment form ID that has not been included by this plugin. Please create a support topic with your site URL. I will take care of it.
 
-= What things are supported and not? =
-This plugin is suppose to work only with Default Commenting System of WordPress. Any other commenting system like Disqus, JetPack Comment, wpDiscuz are not supported. 
+= Which commenting system is supported by this plugin? =
+Only Default Commenting System of WordPress. Any other commenting system like AMP, Disqus, JetPack Comment, wpDiscuz are not supported.
 
-= How to get support for this plugin? =
+= How to get technical assistance for this plugin? =
 Allow me a chance to look into your problem by opening a support topic. I will reply in 24 hours.
 
 == Changelog ==
+
+= 1.0.4 =
+* Minor tweaks
+
+= 1.0.3 =
+* Minified inline JS for better performance
+* Translation made available for Hindi, Bengali, English (United States), English (UK).
+* Minor tweaks 
 
 = 1.0.2 =
 * Added hint for purging cache upon plugin activation

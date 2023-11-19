@@ -46,6 +46,39 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 
 #### Changelog
 
+== Changelog ==
+
+= 1.1.3 =
+* Changed the method of key generation. Make sure to clear the cache for all pages.
+
+= 1.1.2 =
+* Tested with WordPress 6.4.1 and PHP 8.2.12
+* Addressed referral handling for increased precision
+* Improved code readability and consistency following WordPress coding standards
+
+= 1.1.1 =
+* Tested with WordPress 6.2 and PHP 8.2.4
+
+= 1.1.0 =
+* Tested with WordPress 6.1.1 and PHP 8.2.3
+* Updated links
+
+= 1.0.9 =
+* Tested with WordPress 6.0
+
+= 1.0.8 =
+* Tested with WordPress 5.9.1 and PHP 8.1.3
+
+= 1.0.7 =
+* Tested with WordPress 5.8
+* Enhanced compatibility
+
+= 1.0.6 =
+* Tested plugin up to 5.7
+
+= 1.0.5 =
+* Added hint for purging cache in the generated error page to assist first time plugin user.
+
 = 1.0.4 =
 * Minor tweaks
 
@@ -54,12 +87,12 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 * Translation made available for Hindi, Bengali, English (United States), English (UK).
 * Minor tweaks 
 
-= 1.0.2
+= 1.0.2 =
 * Added hint for purging cache upon plugin activation
 * Added support links
 
-= 1.0.1
+= 1.0.1 =
 * Performance optimization
 
-= 1.0.0
+= 1.0.0 =
 * Initial release

@@ -12,11 +12,6 @@ To prevent spam comments plugin blocks the default action path (wp-comments-post
 
 [![Forget Spam Comment](https://i.imgur.com/RhxL0Ba.png)](https://www.youtube.com/watch?v=uwIfk08GSwk)
 
-### Quick Info 
-
-- Join [GulshanForum](https://help.gulshankumar.net/) to get instant help for everything related to WordPress.
-- [Donate](https://www.buymeacoffee.com/gulshan) or share this plugin with your friends.
-
 ### Installation 
 
 To install this plugin from WordPress Dashboard

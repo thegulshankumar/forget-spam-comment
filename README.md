@@ -41,8 +41,6 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 
 #### Changelog
 
-== Changelog ==
-
 = 1.1.3 =
 * Changed the method of key generation. Make sure to clear the cache for all pages.
 

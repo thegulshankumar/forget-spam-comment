@@ -5,7 +5,7 @@
  * Description:       The ultimate solution to stop spam comments in default commenting system of WordPress.
  * Author:            Gulshan Kumar
  * Author URI:        https://www.gulshankumar.net/
- * Version:           1.0.4
+ * Version:           1.1.3
  * Text Domain:       forget-spam-comment
  * Domain Path:       /languages
  */
@@ -14,27 +14,27 @@ defined('ABSPATH') OR die();
 
 /* Register activation hook. */
 register_activation_hook( __FILE__, 'forget_spam_comment_activation_hook' );
- 
+
 /**
  * Runs only when the plugin is activated.
  * @since 1.0.2
  */
 function forget_spam_comment_activation_hook() {
- 
+
 /* Create transient data */
     set_transient( 'forget-spam-comment-activation-notice', true, 5 );
 }
- 
+
 /* Add admin notice */
 add_action( 'admin_notices', 'forget_spam_comment_notice' );
 
- 
+
 /**
  * Admin Notice on Activation.
  * @since 1.0.2
  */
 function forget_spam_comment_notice(){
- 
+
     /* Check transient, if available display notice */
     if( get_transient( 'forget-spam-comment-activation-notice' ) ){
         ?><style>div#message.updated{ display: none; }</style>
@@ -51,8 +51,8 @@ function forget_spam_comment_notice(){
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'forget_spam_comment_add_action_links');
 function forget_spam_comment_add_action_links($links) {
     $plugin_shortcuts = array(
-        '<a rel="noopener" href="https://help.gulshankumar.net" target="_blank">' . __('Ask a Question', 'forget-spam-comment') . '</a>',
-        '<a rel="noopener" href="https://www.buymeacoffee.com/gulshan" target="_blank" style="color:#080;">' . __('Buy developer a coffee', 'forget-spam-comment') . '</a>'
+        '<a rel="noopener" title="Hire for Technical Support" href="https://www.gulshankumar.net/contact/" target="_blank">' . __('Work with Gulshan', 'forget-spam-comment') . '</a>',
+        '<a rel="noopener" title="Show your support" href="https://ko-fi.com/gulshan" target="_blank" style="color:#080;">' . __('Buy developer a coffee', 'forget-spam-comment') . '</a>'
     );
     return array_merge($links, $plugin_shortcuts);
 }
@@ -69,9 +69,9 @@ function forget_spam_comment_modify_action_url() {
 	if (is_singular() && comments_open()) {
 		echo "\n<script>";
 		// Most popular IDs are listed here for compatibility with all popular themes
-		echo "let commentForm = document.querySelector(\"#commentform, #ast-commentform, #ht-commentform\");";
+		echo "let commentForm = document.querySelector(\"#commentform, #ast-commentform, #fl-comment-form, #ht-commentform\");";
 		echo "document.onscroll = function () {";
-		$forget_spam_comment_unique_key  = md5($_SERVER['DOCUMENT_ROOT']); // Generate unique query string for each site
+		$forget_spam_comment_unique_key  = md5( NONCE_SALT ); // Generate unique query string for each site
 		echo "commentForm.action = \"" . wp_make_link_relative(get_site_url()) . "/wp-comments-post.php?$forget_spam_comment_unique_key\";";
 		echo "};";
 		echo "</script>\n";
@@ -84,20 +84,52 @@ function forget_spam_comment_block_response() {
 	header('HTTP/1.1 400 Bad Request');
 	header('Status: 400 Bad Request');
 	header('Connection: Close');
-	die();
+	die('<h1>Error 400</h1><span style="padding:10px;background-color:#FFFF00">If you are an admin of this site, please clear once the Page Cache.</span>');
 }
 
 // Step 4. Allow POST request for comment if md5 hash matches in Request Header as Query String Parameter
-$forget_spam_comment_request = "wp-comments-post.php";
-$forget_spam_comment_requested_uri = isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : "";
-$forget_spam_comment_post_request_received = isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" ? true : false;
-$forget_spam_comment_request_recieved = (strpos($forget_spam_comment_requested_uri, $forget_spam_comment_request) !== false) ? true : false;
-$forget_spam_comment_query_list = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : false;
-$forget_spam_forget_spam_comment_requested_key = md5($_SERVER['DOCUMENT_ROOT']); // Check Request Header against Unique Key
-$forget_spam_comment_request_contain_key = $forget_spam_comment_query_list == $forget_spam_forget_spam_comment_requested_key ? true : false;
-if ($forget_spam_comment_post_request_received) {
-	if ($forget_spam_comment_request_recieved && !$forget_spam_comment_request_contain_key) {
-		forget_spam_comment_block_response();
-	}
+$forget_spam_comment_request = 'wp-comments-post.php';
+$forget_spam_comment_requested_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
+$forget_spam_comment_post_request_received = isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST';
+$forget_spam_comment_request_received = strpos( $forget_spam_comment_requested_uri, $forget_spam_comment_request ) !== false;
+$forget_spam_comment_query_list = isset( $_SERVER['QUERY_STRING'] ) ? $_SERVER['QUERY_STRING'] : '';
+$forget_spam_forget_spam_comment_requested_key = md5( NONCE_SALT );
+$forget_spam_comment_request_contain_key = $forget_spam_comment_query_list === $forget_spam_forget_spam_comment_requested_key;
+$forget_spam_comment_referral_url = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '';
+
+// Check if the referral URL contains the original site and the unique hash query string is present
+if ( $forget_spam_comment_post_request_received &&
+     $forget_spam_comment_request_received &&
+     ! ( $forget_spam_comment_request_contain_key && strpos( $forget_spam_comment_referral_url, get_site_url() ) !== false ) ) {
+    forget_spam_comment_block_response();
 }
-// Share your feedback at https://wordpress.org/support/plugin/forget-spam-comment/reviews/#new-post
+
+// Check if the Forget Spam Comment plugin is active
+if (function_exists('is_plugin_active')) {
+    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+    // Check if the Forget Spam Comment plugin is active
+    if (is_plugin_active('forget-spam-comment/forget-spam-comment.php')) {
+        
+        // Get the installed version of the Forget Spam Comment plugin
+        $installed_version = get_option('forget_spam_comment_version');
+
+        // Compare the installed version with the target version
+        if ($installed_version && version_compare($installed_version, '1.1.3', '==')) {
+            // Display a notice in the WordPress dashboard
+            add_action('admin_notices', 'fsc_display_admin_notice');
+        }
+    }
+}
+
+// Function to display the admin notice
+function fsc_display_admin_notice() {
+    ?>
+    <div class="notice notice-warning is-dismissible">
+        <p><?php _e('Make sure to clear the cache after updating Forget Spam Comment to version 1.1.3.', 'forget-spam-comment'); ?></p>
+    </div>
+    <?php
+}
+
+
+// Kindly share your feedback at https://wordpress.org/support/plugin/forget-spam-comment/reviews/#new-post

@@ -41,8 +41,15 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 
 #### Changelog
 
+= 1.1.5 =
+* Enhanced Bedrock Compatibility. Updated on 24-Jan-2023.
+
+= 1.1.4 =
+* Added a fallback to cover unexpected cases. Updated on 20-Nov-2023.
+
 = 1.1.3 =
-* Changed the method of key generation. Make sure to clear the cache for all pages.
+* Enhanced uniqueness in query string parameters. Updated on 19-Nov-2023.
+* Kindly clear your page cache after updating to version 1.1.3.
 
 = 1.1.2 =
 * Tested with WordPress 6.4.1 and PHP 8.2.12
@@ -70,6 +77,30 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 * Tested plugin up to 5.7
 
 = 1.0.5 =
+* Added hint for purging cache in the generated error page to assist first time plugin user.
+
+= 1.0.4 =
+* Minor tweaks
+
+= 1.0.3 =
+* Minified inline JS for better performance
+* Translation made available for Hindi, Bengali, English (United States), English (UK).
+* Minor tweaks 
+
+= 1.0.2 =
+* Added hint for purging cache upon plugin activation
+* Added support links
+
+= 1.0.1 =
+* Performance optimization
+
+= 1.0.0 =
+* Initial release
+
+== Upgrade Notice ==
+
+= 1.1.3 =
+**Important Notice:** Kindly clear your page cache after updating to version 1.1.3. This release introduces changes in the query string to enhance our anti-spam mechanism, and clearing the cache is essential for seamless functionality. Should you have any questions, please feel free to reach out. Thank you for your cooperation.
 * Added hint for purging cache in the generated error page to assist first time plugin user.
 
 = 1.0.4 =

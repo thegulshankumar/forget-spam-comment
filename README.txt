@@ -3,8 +3,9 @@ Contributors: thegulshankumar
 Donate link: https://ko-fi.com/gulshan
 Tags: comments, spam, anti spam, stop spam, security, gdpr, firewall
 Requires at least: 4.5
-Tested up to: 6.4.1
-Stable tag: 1.1.3
+Requires PHP: 5.6
+Tested up to: 6.4.2
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,11 +35,10 @@ To prevent spam comments plugin blocks the default action path (wp-comments-post
 [youtube https://www.youtube.com/watch?v=uwIfk08GSwk]
 Watch on [YouTube](https://www.youtube.com/watch?v=uwIfk08GSwk)
 
-== Let's connect ==
+== Let's support each other 🙏 ==
 
-- Please Upvote Forget Spam Comment plugin at [Product Hunt](https://www.producthunt.com/posts/forget-spam-comment)
-- Join [GulshanForum](https://help.gulshankumar.net/) to get instant help for everything related to WordPress.
-- Follow on [Twitter](https://twitter.com/TheGulshanKumar) to stay in touch.
+- Please Upvote Forget Spam Comment plugin at [Product Hunt](https://www.producthunt.com/products/forget-spam-comment#forget-spam-comment)
+- You can [contact me](https://www.gulshankumar.net/contact/) to report any issues. I'd be happy to assist.
 
 == Installation ==
 
@@ -69,8 +69,15 @@ Kindly allow me a chance to look into your problem by opening a support topic. I
 
 == Changelog ==
 
+= 1.1.5 =
+* Enhanced Bedrock Compatibility. Updated on 24-Jan-2023.
+
+= 1.1.4 =
+* Added a fallback to cover unexpected cases. Updated on 20-Nov-2023.
+
 = 1.1.3 =
-* Changed the method of key generation. Make sure to clear the cache for all pages.
+* Enhanced uniqueness in query string parameters. Updated on 19-Nov-2023.
+* Kindly clear your page cache after updating to version 1.1.3.
 
 = 1.1.2 =
 * Tested with WordPress 6.4.1 and PHP 8.2.12
@@ -117,3 +124,8 @@ Kindly allow me a chance to look into your problem by opening a support topic. I
 
 = 1.0.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+= 1.1.3 =
+**Important Notice:** Kindly clear your page cache after updating to version 1.1.3. This release introduces changes in the query string to enhance our anti-spam mechanism, and clearing the cache is essential for seamless functionality. Should you have any questions, please feel free to reach out. Thank you for your cooperation.

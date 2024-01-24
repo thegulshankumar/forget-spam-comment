@@ -42,7 +42,7 @@ Allow me a chance to look into your problem by opening a support topic. I will r
 #### Changelog
 
 = 1.1.5 =
-* Enhanced Bedrock Compatibility. Updated on 24-Jan-2023.
+* Enhanced Bedrock Compatibility. Updated on 24-Jan-2024.
 
 = 1.1.4 =
 * Added a fallback to cover unexpected cases. Updated on 20-Nov-2023.

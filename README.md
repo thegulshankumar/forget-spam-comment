@@ -44,13 +44,28 @@ To prevent spam comments, the plugin blocks the default action path (`wp-comment
 
 ---
 
-### Frequently Asked Questions
+#### Frequently Asked Questions
 
-#### How do I test if this plugin is working?
+<details>
+<summary>How do I test if this plugin is working?</summary>
+
+
 Go to any post where comments are enabled and try to post a comment. If the comment is posted successfully, everything is working fine. If you see error 400, you may have forgotten to clear the page cache after plugin activation. If you are still unable to post a comment and the page just reloads, it means your theme uses a different comment form ID that is not supported by this plugin. Please create a support topic with your site URL, and I will assist you.
 
-#### What commenting systems are supported?
+</details>
+
+<details>
+<summary>What commenting systems are supported?</summary>
+
+
 This plugin is designed to work only with the default commenting system of WordPress. Other commenting systems like Disqus, JetPack Comments, and wpDiscuz are not supported.
 
-#### How can I get support for this plugin?
+</details>
+
+<details>
+<summary>How can I get support for this plugin?</summary>
+
+
 Please allow me a chance to look into your problem by [opening a support topic](https://wordpress.org/support/plugin/forget-spam-comment/). I will respond within 24 hours.
+
+</details>

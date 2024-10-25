@@ -8,8 +8,8 @@
 
 ---
 
-### Important
-- No settings are required. Please clear your page cache after plugin activation or deactivation.
+> [!TIP]
+> No settings are required. Please clear your page cache after plugin activation or deactivation.
 
 ---
 
